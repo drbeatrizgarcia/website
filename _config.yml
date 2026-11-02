@@ -1,0 +1,3 @@
+# GitHub Pages settings. The pages themselves are plain HTML.
+exclude:
+  - README.md
