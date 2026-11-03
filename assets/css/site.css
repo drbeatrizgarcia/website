@@ -425,3 +425,6 @@ a.press-item:hover{border-color:var(--accent)}
 a.press-item:hover .go{text-decoration:underline}
 a.media-card{text-decoration:none}
 a.media-card:hover .t{text-decoration:underline}
+
+.dark .text-link{color:var(--accent-light)}
+.dark .text-link:hover{color:var(--on-dark)}
