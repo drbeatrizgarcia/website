@@ -300,6 +300,9 @@ a.card:hover{border-color:var(--accent)}
 .venues{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(270px,100%),1fr));gap:32px 40px}
 .venues h3{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:12px}
 .venues .serif-list{font-size:20px;color:var(--ink)}
+.venues .serif-list + .serif-list{margin-top:14px}
+.venues .coming{align-self:start}
+.venues .sub{display:block;font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
 .coming{background:var(--ink);color:var(--on-dark);padding:22px}
 .coming h3{color:var(--accent-light)}
 .coming p{font-family:var(--serif);font-size:24px;line-height:1.3}
