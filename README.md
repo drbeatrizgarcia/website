@@ -1,8 +1,6 @@
-# beatrizgarcia.net: new site preview
+# dr.beatrizgarcia.net
 
-This is a working preview of the redesigned website of Dr Beatriz García. The current site is still at [beatrizgarcia.net](https://www.beatrizgarcia.net/).
-
-Search engines can't see the preview. Every page has a `noindex` tag, `robots.txt` blocks crawlers, and a violet bar at the top of each page says it is a preview.
+This repository holds the website of Dr Beatriz García, published at [dr.beatrizgarcia.net](https://dr.beatrizgarcia.net/). Her archive of earlier publications, talks and projects stays at [beatrizgarcia.net](https://www.beatrizgarcia.net/), and a slim bar at the top of every page links to it.
 
 ## Pages
 
@@ -22,23 +20,23 @@ The site is plain HTML and CSS. It has no build step, no tracking and no cookies
 
 ## Making changes on GitHub
 
-**Change wording.** Open the page's file and click the pencil icon. Edit the text between the tags, then click **Commit changes**. The preview updates within a couple of minutes.
+**Change wording.** Open the page's file and click the pencil icon. Edit the text between the tags, then click **Commit changes**. The site updates within a couple of minutes.
 
 **Replace a photo.** Open `assets/img` and click **Add file → Upload files**. Upload the new photo under exactly the same file name, then commit. Most frames crop the photo to fit, so keep the subject near the centre.
 
 **Change the contact email.** The address lives in one place: line 7 of `assets/js/site.js`. Every email link on the site follows it. The address is put together by the browser, so spam robots can't read it from the pages.
 
-**Menu and footer.** These are repeated in each of the nine pages. A change to them needs the same edit in every file.
+**Menu, footer and archive bar.** These are repeated in each of the nine pages. A change to them needs the same edit in every file.
 
-## When the new design goes live
+## Search engines and sharing
 
-1. Delete the line `<meta name="robots" content="noindex, nofollow">` from each page.
-2. In `robots.txt`, change `Disallow: /` to `Allow: /`.
-3. Hide the preview bar by adding `.preview-bar{display:none}` at the end of `assets/css/site.css`.
+- `robots.txt` lets search engines in and points them to `sitemap.xml`, which lists the nine pages. Add any new page there too.
+- Each page names its own address (`canonical`) and carries a share image, `assets/img/og-card.jpg`, used when a link is posted on LinkedIn or elsewhere.
+- The home page describes Dr Beatriz García for search engines in a small block of structured data.
 
-The preview also works as the blueprint for rebuilding these pages in WordPress.
+## Domain
 
-`_config.yml` only keeps this README off the published site.
+The `CNAME` file connects this site to dr.beatrizgarcia.net. Don't delete it. `_config.yml` only keeps this README off the published site.
 
 ## Credits
 

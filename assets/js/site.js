@@ -81,6 +81,33 @@ var EMAIL = ['drbeatrizgarcia', 'gmail.com'];
     sel.addRange(range);
   }
 
+  /* From the field: tabs (Olympic Games, Capitals of Culture, festivals and cities). */
+  document.querySelectorAll('.field-tabs').forEach(function (list) {
+    var tabs = Array.prototype.slice.call(list.querySelectorAll('[role="tab"]'));
+    var show = function (tab, focus) {
+      tabs.forEach(function (t) {
+        var on = t === tab;
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.tabIndex = on ? 0 : -1;
+        var panel = document.getElementById(t.getAttribute('aria-controls'));
+        if (panel) { panel.hidden = !on; }
+      });
+      if (focus) { tab.focus(); }
+    };
+    tabs.forEach(function (tab, i) {
+      tab.addEventListener('click', function () { show(tab, false); });
+      tab.addEventListener('keydown', function (e) {
+        var next = null;
+        if (e.key === 'ArrowRight') { next = tabs[(i + 1) % tabs.length]; }
+        if (e.key === 'ArrowLeft') { next = tabs[(i - 1 + tabs.length) % tabs.length]; }
+        if (e.key === 'Home') { next = tabs[0]; }
+        if (e.key === 'End') { next = tabs[tabs.length - 1]; }
+        if (next) { e.preventDefault(); show(next, true); }
+      });
+    });
+    show(tabs[0], false);
+  });
+
   /* Print button (press kit fact sheet). */
   document.querySelectorAll('.js-print').forEach(function (btn) {
     btn.addEventListener('click', function () { window.print(); });
