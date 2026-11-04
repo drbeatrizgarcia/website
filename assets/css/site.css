@@ -77,6 +77,7 @@ h1.display--page{font-size:clamp(40px,4.8vw,70px)}
 .dark .body{color:var(--on-dark-muted)}
 .small{font-size:15px;line-height:1.55;color:var(--muted)}
 .dark .small{color:var(--on-dark-muted)}
+.dark .small a{color:var(--on-dark);text-decoration-color:var(--accent-light);text-underline-offset:3px}
 .caption{font-size:14px;line-height:1.5;color:var(--muted)}
 .dark .caption{color:var(--on-dark-muted)}
 .serif-list{font-family:var(--serif);font-size:clamp(19px,1.8vw,22px);line-height:1.5;color:var(--text);text-wrap:pretty}
