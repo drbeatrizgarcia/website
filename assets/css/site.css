@@ -438,3 +438,30 @@ a.media-card:hover .t{text-decoration:underline}
 
 .dark .text-link{color:var(--accent-light)}
 .dark .text-link:hover{color:var(--on-dark)}
+
+/* ---------- Research theme pages ---------- */
+.crumb{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:baseline;font-size:13px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--accent-light)}
+.crumb a{color:var(--on-dark);text-decoration:none;border-bottom:1px solid var(--accent-light);padding:4px 0}
+.crumb a:hover{color:var(--accent-light)}
+.crumb span[aria-hidden]{color:#6E6888}
+.jump{display:flex;flex-wrap:wrap;gap:2px 22px;font-size:15px;font-weight:600}
+.jump a{color:var(--on-dark);text-decoration:none;padding:10px 0 4px;border-bottom:1px solid var(--rule-dark)}
+.jump a:hover{color:var(--accent-light);border-bottom-color:var(--accent-light)}
+.themes--other .theme{min-height:0}
+.card .for a{font-weight:600}
+.writing a{font-size:20px}
+@media (max-width:600px){.writing a{flex-direction:column;gap:4px}.writing .date{white-space:normal}}
+.record div > span:first-child:empty::before{content:"—"}
+.bib-title{font-family:var(--serif);font-weight:500;font-size:22px;line-height:1.2;display:flex;align-items:baseline;gap:10px}
+.bib-title .small{font-family:var(--sans);color:var(--muted);font-variant-numeric:tabular-nums}
+@media (min-width:900px){.refs--cols{display:block;columns:2;column-gap:56px}.refs--cols li{break-inside:avoid}}
+.stat-l a{color:inherit}
+/* ECoC page, 18 Nov 2026: grouped project table, tall title-year photos */
+.table .table-group th{padding:30px 0 10px;border-top:0;border-bottom:1px solid var(--ink);font-size:13px;letter-spacing:.2em;color:var(--accent)}
+.table tbody .table-group:first-child th{padding-top:18px}
+@media (max-width:760px){
+  .table tr.table-group{border-top:0;padding:22px 0 0}
+  .table .table-group th{display:block;padding:0 0 8px}
+}
+.games--tall img{aspect-ratio:3/5}
+.field-sub{margin-top:10px}

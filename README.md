@@ -15,6 +15,11 @@ This repository holds the website of Dr Beatriz García, published at [dr.beatri
 | Media | `media/index.html` |
 | Euphoric Cities | `euphoric-cities/index.html` |
 | Contact | `contact/index.html` |
+| Research theme: Olympic Games and Cultural Olympiads | `olympics/index.html` |
+| Research theme: European Capitals of Culture | `ecocs/index.html` |
+| Research theme: Cities, placemaking and regeneration | `cities/index.html` |
+| Research theme: Festivals and major events | `festivals/index.html` |
+| Research theme: Evaluation and cultural value | `impact/index.html` |
 
 The site is plain HTML and CSS. It has no build step, no tracking and no cookies. Videos load from YouTube's privacy-enhanced mode, and only when someone presses play.
 
@@ -26,11 +31,11 @@ The site is plain HTML and CSS. It has no build step, no tracking and no cookies
 
 **Change the contact email.** The address lives in one place: line 7 of `assets/js/site.js`. Every email link on the site follows it. The address is put together by the browser, so spam robots can't read it from the pages.
 
-**Menu, footer and archive bar.** These are repeated in each of the nine pages. A change to them needs the same edit in every file.
+**Menu, footer and archive bar.** These are repeated in each of the fourteen pages. A change to them needs the same edit in every file.
 
 ## Search engines and sharing
 
-- `robots.txt` lets search engines in and points them to `sitemap.xml`, which lists the nine pages. Add any new page there too.
+- `robots.txt` lets search engines in and points them to `sitemap.xml`, which lists the fourteen pages. Add any new page there too.
 - Each page names its own address (`canonical`) and carries a share image, `assets/img/og-card.jpg`, used when a link is posted on LinkedIn or elsewhere.
 - The home page describes Dr Beatriz García for search engines in a small block of structured data.
 
