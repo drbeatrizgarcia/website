@@ -37,6 +37,30 @@ var EMAIL = ['drbeatrizgarcia', 'gmail.com'];
     });
   }
 
+  /* Themes menu: opens on click (and on hover on desktop, via the stylesheet). */
+  document.querySelectorAll('.nav-group').forEach(function (group) {
+    var btn = group.querySelector('.nav-sub-toggle');
+    if (!btn) { return; }
+    var set = function (open) {
+      group.classList.toggle('open', open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    };
+    btn.addEventListener('click', function () { set(!group.classList.contains('open')); });
+    group.addEventListener('focusout', function (e) {
+      if (!group.contains(e.relatedTarget)) { set(false); }
+    });
+    group.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && group.classList.contains('open')) {
+        e.stopPropagation();
+        set(false);
+        btn.focus();
+      }
+    });
+    document.addEventListener('click', function (e) {
+      if (!group.contains(e.target)) { set(false); }
+    });
+  });
+
   /* Videos load from YouTube (privacy-enhanced mode) only after a click. */
   document.querySelectorAll('.video[data-youtube]').forEach(function (box) {
     var btn = box.querySelector('.video-play');
